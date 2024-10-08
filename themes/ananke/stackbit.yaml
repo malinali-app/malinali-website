@@ -122,9 +122,7 @@ models:
           - type: string
             name: background_color_class
             label: background_color_class
-          - type: number
-            name: recent_posts_number
-            label: recent_posts_number
+
   home:
     type: page
     label: Home
@@ -228,9 +226,6 @@ models:
       - type: string
         name: description
         label: Description
-      - type: enum
-        name: tags
-        label: tags
       - type: boolean
         name: draft
         label: Draft
