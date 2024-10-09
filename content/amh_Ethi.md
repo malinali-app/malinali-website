@@ -1,5 +1,5 @@
 ---
-title: "Amharic"
-summary: "amh_Ethi amh am" 
+title: "Amharic amh"
+summary: "amh_Ethi" 
 ---
 {{< csv-to-table "amh_Ethi.csv" >}}

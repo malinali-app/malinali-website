@@ -1,5 +1,5 @@
 ---
-title: "Swahili (individual language)"
-summary: "swh_Latn swh " 
+title: "Swahili (individual language) swh"
+summary: "swh_Latn" 
 ---
 {{< csv-to-table "swh_Latn.csv" >}}

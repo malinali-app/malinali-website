@@ -1,5 +1,5 @@
 ---
-title: "Wolof"
-summary: "wol_Latn wol wo" 
+title: "Wolof wol"
+summary: "wol_Latn" 
 ---
 {{< csv-to-table "wol_Latn.csv" >}}

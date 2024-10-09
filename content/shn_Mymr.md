@@ -1,5 +1,5 @@
 ---
-title: "Shan"
-summary: "shn_Mymr shn " 
+title: "Shan shn"
+summary: "shn_Mymr" 
 ---
 {{< csv-to-table "shn_Mymr.csv" >}}

@@ -1,5 +1,5 @@
 ---
-title: "Eastern Yiddish"
-summary: "ydd_Hebr ydd " 
+title: "Eastern Yiddish ydd"
+summary: "ydd_Hebr" 
 ---
 {{< csv-to-table "ydd_Hebr.csv" >}}

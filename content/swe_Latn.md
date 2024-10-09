@@ -1,5 +1,5 @@
 ---
-title: "Swedish"
-summary: "swe_Latn swe sv" 
+title: "Swedish swe"
+summary: "swe_Latn" 
 ---
 {{< csv-to-table "swe_Latn.csv" >}}

@@ -1,5 +1,5 @@
 ---
-title: "Kinyarwanda"
-summary: "kin_Latn kin rw" 
+title: "Kinyarwanda kin"
+summary: "kin_Latn" 
 ---
 {{< csv-to-table "kin_Latn.csv" >}}

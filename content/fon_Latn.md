@@ -1,5 +1,5 @@
 ---
-title: "Fon"
-summary: "fon_Latn fon " 
+title: "Fon fon"
+summary: "fon_Latn" 
 ---
 {{< csv-to-table "fon_Latn.csv" >}}

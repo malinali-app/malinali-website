@@ -1,5 +1,5 @@
 ---
-title: "Esperanto"
-summary: "epo_Latn epo eo" 
+title: "Esperanto epo"
+summary: "epo_Latn" 
 ---
 {{< csv-to-table "epo_Latn.csv" >}}

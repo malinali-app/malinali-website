@@ -1,5 +1,5 @@
 ---
-title: "Tunisian Arabic"
-summary: "aeb_Arab aeb " 
+title: "Tunisian Arabic aeb"
+summary: "aeb_Arab" 
 ---
 {{< csv-to-table "aeb_Arab.csv" >}}

@@ -1,5 +1,5 @@
 ---
-title: "Kamba (Kenya)"
-summary: "kam_Latn kam " 
+title: "Kamba (Kenya) kam"
+summary: "kam_Latn" 
 ---
 {{< csv-to-table "kam_Latn.csv" >}}

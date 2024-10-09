@@ -1,5 +1,5 @@
 ---
-title: "Standard Latvian"
-summary: "lvs_Latn lvs " 
+title: "Standard Latvian lvs"
+summary: "lvs_Latn" 
 ---
 {{< csv-to-table "lvs_Latn.csv" >}}

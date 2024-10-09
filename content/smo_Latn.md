@@ -1,5 +1,5 @@
 ---
-title: "Samoan"
-summary: "smo_Latn smo sm" 
+title: "Samoan smo"
+summary: "smo_Latn" 
 ---
 {{< csv-to-table "smo_Latn.csv" >}}

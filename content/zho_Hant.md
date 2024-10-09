@@ -1,5 +1,5 @@
 ---
-title: "Chinese"
-summary: "zho_Hant zho zh" 
+title: "Chinese zho"
+summary: "zho_Hant" 
 ---
 {{< csv-to-table "zho_Hant.csv" >}}

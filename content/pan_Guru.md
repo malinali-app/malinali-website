@@ -1,5 +1,5 @@
 ---
-title: "Panjabi"
-summary: "pan_Guru pan pa" 
+title: "Panjabi pan"
+summary: "pan_Guru" 
 ---
 {{< csv-to-table "pan_Guru.csv" >}}

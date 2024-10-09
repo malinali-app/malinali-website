@@ -1,5 +1,5 @@
 ---
-title: "Sundanese"
-summary: "sun_Latn sun su" 
+title: "Sundanese sun"
+summary: "sun_Latn" 
 ---
 {{< csv-to-table "sun_Latn.csv" >}}

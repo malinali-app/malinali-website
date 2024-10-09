@@ -1,5 +1,5 @@
 ---
-title: "Telugu"
-summary: "tel_Telu tel te" 
+title: "Telugu tel"
+summary: "tel_Telu" 
 ---
 {{< csv-to-table "tel_Telu.csv" >}}

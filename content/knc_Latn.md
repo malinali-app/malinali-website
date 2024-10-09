@@ -1,5 +1,5 @@
 ---
-title: "Central Kanuri"
-summary: "knc_Latn knc " 
+title: "Central Kanuri knc"
+summary: "knc_Latn" 
 ---
 {{< csv-to-table "knc_Latn.csv" >}}

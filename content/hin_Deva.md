@@ -1,5 +1,5 @@
 ---
-title: "Hindi"
-summary: "hin_Deva hin hi" 
+title: "Hindi hin"
+summary: "hin_Deva" 
 ---
 {{< csv-to-table "hin_Deva.csv" >}}

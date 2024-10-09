@@ -1,5 +1,5 @@
 ---
-title: "Vietnamese"
-summary: "vie_Latn vie vi" 
+title: "Vietnamese vie"
+summary: "vie_Latn" 
 ---
 {{< csv-to-table "vie_Latn.csv" >}}

@@ -1,5 +1,5 @@
 ---
-title: "Hausa"
-summary: "hau_Latn hau ha" 
+title: "Hausa hau"
+summary: "hau_Latn" 
 ---
 {{< csv-to-table "hau_Latn.csv" >}}

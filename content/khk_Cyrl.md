@@ -1,5 +1,5 @@
 ---
-title: "Halh Mongolian"
-summary: "khk_Cyrl khk " 
+title: "Halh Mongolian khk"
+summary: "khk_Cyrl" 
 ---
 {{< csv-to-table "khk_Cyrl.csv" >}}

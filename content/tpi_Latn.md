@@ -1,5 +1,5 @@
 ---
-title: "Tok Pisin"
-summary: "tpi_Latn tpi " 
+title: "Tok Pisin tpi"
+summary: "tpi_Latn" 
 ---
 {{< csv-to-table "tpi_Latn.csv" >}}

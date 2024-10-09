@@ -1,5 +1,5 @@
 ---
-title: "Norwegian Bokmål"
-summary: "nob_Latn nob nb" 
+title: "Norwegian Bokmål nob"
+summary: "nob_Latn" 
 ---
 {{< csv-to-table "nob_Latn.csv" >}}

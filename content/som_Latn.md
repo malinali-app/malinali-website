@@ -1,5 +1,5 @@
 ---
-title: "Somali"
-summary: "som_Latn som so" 
+title: "Somali som"
+summary: "som_Latn" 
 ---
 {{< csv-to-table "som_Latn.csv" >}}

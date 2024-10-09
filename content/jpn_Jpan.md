@@ -1,5 +1,5 @@
 ---
-title: "Japanese"
-summary: "jpn_Jpan jpn ja" 
+title: "Japanese jpn"
+summary: "jpn_Jpan" 
 ---
 {{< csv-to-table "jpn_Jpan.csv" >}}

@@ -1,5 +1,5 @@
 ---
-title: "Occitan (post 1500)"
-summary: "oci_Latn oci oc" 
+title: "Occitan (post 1500) oci"
+summary: "oci_Latn" 
 ---
 {{< csv-to-table "oci_Latn.csv" >}}

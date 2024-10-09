@@ -1,5 +1,5 @@
 ---
-title: "Mesopotamian Arabic"
-summary: "acm_Arab acm " 
+title: "Mesopotamian Arabic acm"
+summary: "acm_Arab" 
 ---
 {{< csv-to-table "acm_Arab.csv" >}}

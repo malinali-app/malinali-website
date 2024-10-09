@@ -1,5 +1,5 @@
 ---
-title: "South Azerbaijani"
-summary: "azb_Arab azb " 
+title: "South Azerbaijani azb"
+summary: "azb_Arab" 
 ---
 {{< csv-to-table "azb_Arab.csv" >}}

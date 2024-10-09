@@ -1,5 +1,5 @@
 ---
-title: "Minangkabau"
-summary: "min_Latn min " 
+title: "Minangkabau min"
+summary: "min_Latn" 
 ---
 {{< csv-to-table "min_Latn.csv" >}}

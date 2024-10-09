@@ -1,5 +1,5 @@
 ---
-title: "Balinese"
-summary: "ban_Latn ban " 
+title: "Balinese ban"
+summary: "ban_Latn" 
 ---
 {{< csv-to-table "ban_Latn.csv" >}}

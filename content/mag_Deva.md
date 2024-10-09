@@ -1,5 +1,5 @@
 ---
-title: "Magahi"
-summary: "mag_Deva mag " 
+title: "Magahi mag"
+summary: "mag_Deva" 
 ---
 {{< csv-to-table "mag_Deva.csv" >}}

@@ -1,5 +1,5 @@
 ---
-title: "Lushai"
-summary: "lus_Latn lus " 
+title: "Lushai lus"
+summary: "lus_Latn" 
 ---
 {{< csv-to-table "lus_Latn.csv" >}}

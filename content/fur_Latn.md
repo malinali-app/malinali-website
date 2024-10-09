@@ -1,5 +1,5 @@
 ---
-title: "Friulian"
-summary: "fur_Latn fur " 
+title: "Friulian fur"
+summary: "fur_Latn" 
 ---
 {{< csv-to-table "fur_Latn.csv" >}}

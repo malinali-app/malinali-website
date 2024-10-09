@@ -1,5 +1,5 @@
 ---
-title: "Croatian"
-summary: "hrv_Latn hrv hr" 
+title: "Croatian hrv"
+summary: "hrv_Latn" 
 ---
 {{< csv-to-table "hrv_Latn.csv" >}}

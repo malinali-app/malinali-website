@@ -1,5 +1,5 @@
 ---
-title: "Uighur"
-summary: "uig_Arab uig ug" 
+title: "Uighur uig"
+summary: "uig_Arab" 
 ---
 {{< csv-to-table "uig_Arab.csv" >}}

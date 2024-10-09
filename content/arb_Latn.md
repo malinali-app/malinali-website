@@ -1,5 +1,5 @@
 ---
-title: "Standard Arabic"
-summary: "arb_Latn arb " 
+title: "Standard Arabic arb"
+summary: "arb_Latn" 
 ---
 {{< csv-to-table "arb_Latn.csv" >}}

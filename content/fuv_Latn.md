@@ -1,5 +1,5 @@
 ---
-title: "Nigerian Fulfulde"
-summary: "fuv_Latn fuv " 
+title: "Nigerian Fulfulde fuv"
+summary: "fuv_Latn" 
 ---
 {{< csv-to-table "fuv_Latn.csv" >}}

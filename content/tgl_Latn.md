@@ -1,5 +1,5 @@
 ---
-title: "Tagalog"
-summary: "tgl_Latn tgl tl" 
+title: "Tagalog tgl"
+summary: "tgl_Latn" 
 ---
 {{< csv-to-table "tgl_Latn.csv" >}}

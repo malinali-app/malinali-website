@@ -1,5 +1,5 @@
 ---
-title: "Levantine Arabic"
-summary: "apc_Arab apc " 
+title: "Levantine Arabic apc"
+summary: "apc_Arab" 
 ---
 {{< csv-to-table "apc_Arab.csv" >}}

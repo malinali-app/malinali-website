@@ -1,5 +1,5 @@
 ---
-title: "Macedonian"
-summary: "mkd_Cyrl mkd mk" 
+title: "Macedonian mkd"
+summary: "mkd_Cyrl" 
 ---
 {{< csv-to-table "mkd_Cyrl.csv" >}}

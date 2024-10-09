@@ -1,5 +1,5 @@
 ---
-title: "Pangasinan"
-summary: "pag_Latn pag " 
+title: "Pangasinan pag"
+summary: "pag_Latn" 
 ---
 {{< csv-to-table "pag_Latn.csv" >}}

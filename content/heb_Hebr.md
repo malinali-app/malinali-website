@@ -1,5 +1,5 @@
 ---
-title: "Hebrew"
-summary: "heb_Hebr heb he" 
+title: "Hebrew heb"
+summary: "heb_Hebr" 
 ---
 {{< csv-to-table "heb_Hebr.csv" >}}

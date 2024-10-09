@@ -1,5 +1,5 @@
 ---
-title: "Fijian"
-summary: "fij_Latn fij fj" 
+title: "Fijian fij"
+summary: "fij_Latn" 
 ---
 {{< csv-to-table "fij_Latn.csv" >}}

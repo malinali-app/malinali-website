@@ -1,5 +1,5 @@
 ---
-title: "Santali"
-summary: "sat_Olck sat " 
+title: "Santali sat"
+summary: "sat_Olck" 
 ---
 {{< csv-to-table "sat_Olck.csv" >}}

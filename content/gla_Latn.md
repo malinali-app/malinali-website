@@ -1,5 +1,5 @@
 ---
-title: "Scottish Gaelic"
-summary: "gla_Latn gla gd" 
+title: "Scottish Gaelic gla"
+summary: "gla_Latn" 
 ---
 {{< csv-to-table "gla_Latn.csv" >}}

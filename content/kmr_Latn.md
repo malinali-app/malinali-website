@@ -1,5 +1,5 @@
 ---
-title: "Northern Kurdish"
-summary: "kmr_Latn kmr " 
+title: "Northern Kurdish kmr"
+summary: "kmr_Latn" 
 ---
 {{< csv-to-table "kmr_Latn.csv" >}}

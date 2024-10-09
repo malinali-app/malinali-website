@@ -1,5 +1,5 @@
 ---
-title: "Bosnian"
-summary: "bos_Latn bos bs" 
+title: "Bosnian bos"
+summary: "bos_Latn" 
 ---
 {{< csv-to-table "bos_Latn.csv" >}}

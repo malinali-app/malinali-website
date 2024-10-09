@@ -1,5 +1,5 @@
 ---
-title: "Sanskrit"
-summary: "san_Deva san sa" 
+title: "Sanskrit san"
+summary: "san_Deva" 
 ---
 {{< csv-to-table "san_Deva.csv" >}}

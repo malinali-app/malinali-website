@@ -1,5 +1,5 @@
 ---
-title: "Limburgan"
-summary: "lim_Latn lim li" 
+title: "Limburgan lim"
+summary: "lim_Latn" 
 ---
 {{< csv-to-table "lim_Latn.csv" >}}

@@ -1,5 +1,5 @@
 ---
-title: "Kashmiri"
-summary: "kas_Deva kas ks" 
+title: "Kashmiri kas"
+summary: "kas_Deva" 
 ---
 {{< csv-to-table "kas_Deva.csv" >}}

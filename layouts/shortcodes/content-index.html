@@ -3,7 +3,6 @@
     {{ if and (not .Params.draft) (not .Params.isHome) }}
       <li>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
-        <p>{{ .Summary }}</p>
       </li>
     {{ end }}
   {{ end }}

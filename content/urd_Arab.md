@@ -1,5 +1,5 @@
 ---
-title: "Urdu"
-summary: "urd_Arab urd ur" 
+title: "Urdu urd"
+summary: "urd_Arab" 
 ---
 {{< csv-to-table "urd_Arab.csv" >}}

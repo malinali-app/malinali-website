@@ -1,5 +1,5 @@
 ---
-title: "Tigrinya"
-summary: "tir_Ethi tir ti" 
+title: "Tigrinya tir"
+summary: "tir_Ethi" 
 ---
 {{< csv-to-table "tir_Ethi.csv" >}}

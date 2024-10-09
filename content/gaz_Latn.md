@@ -1,5 +1,5 @@
 ---
-title: "West Central Oromo"
-summary: "gaz_Latn gaz " 
+title: "West Central Oromo gaz"
+summary: "gaz_Latn" 
 ---
 {{< csv-to-table "gaz_Latn.csv" >}}

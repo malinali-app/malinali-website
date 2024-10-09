@@ -1,5 +1,5 @@
 ---
-title: "Ligurian"
-summary: "lij_Latn lij " 
+title: "Ligurian lij"
+summary: "lij_Latn" 
 ---
 {{< csv-to-table "lij_Latn.csv" >}}

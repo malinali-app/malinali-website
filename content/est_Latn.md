@@ -1,5 +1,5 @@
 ---
-title: "Estonian"
-summary: "est_Latn est et" 
+title: "Estonian est"
+summary: "est_Latn" 
 ---
 {{< csv-to-table "est_Latn.csv" >}}

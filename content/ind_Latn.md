@@ -1,5 +1,5 @@
 ---
-title: "Indonesian"
-summary: "ind_Latn ind id" 
+title: "Indonesian ind"
+summary: "ind_Latn" 
 ---
 {{< csv-to-table "ind_Latn.csv" >}}

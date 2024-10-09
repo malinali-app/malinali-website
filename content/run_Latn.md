@@ -1,5 +1,5 @@
 ---
-title: "Rundi"
-summary: "run_Latn run rn" 
+title: "Rundi run"
+summary: "run_Latn" 
 ---
 {{< csv-to-table "run_Latn.csv" >}}

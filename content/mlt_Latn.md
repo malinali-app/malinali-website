@@ -1,5 +1,5 @@
 ---
-title: "Maltese"
-summary: "mlt_Latn mlt mt" 
+title: "Maltese mlt"
+summary: "mlt_Latn" 
 ---
 {{< csv-to-table "mlt_Latn.csv" >}}

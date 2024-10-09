@@ -1,5 +1,5 @@
 ---
-title: "Kabiyè"
-summary: "kbp_Latn kbp " 
+title: "Kabiyè kbp"
+summary: "kbp_Latn" 
 ---
 {{< csv-to-table "kbp_Latn.csv" >}}

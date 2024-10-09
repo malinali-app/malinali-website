@@ -1,5 +1,5 @@
 ---
-title: "Luxembourgish"
-summary: "ltz_Latn ltz lb" 
+title: "Luxembourgish ltz"
+summary: "ltz_Latn" 
 ---
 {{< csv-to-table "ltz_Latn.csv" >}}

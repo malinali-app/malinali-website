@@ -1,5 +1,5 @@
 ---
-title: "Georgian"
-summary: "kat_Geor kat ka" 
+title: "Georgian kat"
+summary: "kat_Geor" 
 ---
 {{< csv-to-table "kat_Geor.csv" >}}

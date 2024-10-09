@@ -1,5 +1,5 @@
 ---
-title: "Sardinian"
-summary: "srd_Latn srd sc" 
+title: "Sardinian srd"
+summary: "srd_Latn" 
 ---
 {{< csv-to-table "srd_Latn.csv" >}}

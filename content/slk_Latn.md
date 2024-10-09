@@ -1,5 +1,5 @@
 ---
-title: "Slovak"
-summary: "slk_Latn slk sk" 
+title: "Slovak slk"
+summary: "slk_Latn" 
 ---
 {{< csv-to-table "slk_Latn.csv" >}}

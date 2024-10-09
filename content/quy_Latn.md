@@ -1,5 +1,5 @@
 ---
-title: "Ayacucho Quechua"
-summary: "quy_Latn quy " 
+title: "Ayacucho Quechua quy"
+summary: "quy_Latn" 
 ---
 {{< csv-to-table "quy_Latn.csv" >}}

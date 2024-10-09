@@ -1,5 +1,5 @@
 ---
-title: "Khmer"
-summary: "khm_Khmr khm km" 
+title: "Khmer khm"
+summary: "khm_Khmr" 
 ---
 {{< csv-to-table "khm_Khmr.csv" >}}

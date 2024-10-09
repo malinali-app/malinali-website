@@ -1,5 +1,5 @@
 ---
-title: "Afrikaans"
-summary: "afr_Latn afr af" 
+title: "Afrikaans afr"
+summary: "afr_Latn" 
 ---
 {{< csv-to-table "afr_Latn.csv" >}}
