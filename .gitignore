@@ -1,8 +1,20 @@
 # Hugo
-.hugo_build.lock
-/.hugo_build.lock
-/public
-\public
-\public\
-/public/
 public/
+resources/_gen/
+.hugo_build.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build
+dist/
+build/
+/doc

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Site.Title }} - {{ .Site.Params.description }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fafafa;
+      min-height: 100vh;
+    }
+
+    /* Navigation */
+    nav {
+      background: #0066cc;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+
+    nav .language-switcher {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    nav a.active {
+      background: rgba(255,255,255,0.3);
+      border-bottom: 2px solid white;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Accent bars - separate colors */
+    .accent-top {
+      display: flex;
+      height: 4px;
+      margin: 0;
+    }
+
+    .accent-top div {
+      flex: 1;
+    }
+
+    .accent-top .blue {
+      background: #0066cc;
+    }
+
+    .accent-top .red {
+      background: #dc143c;
+    }
+
+    .accent-top .yellow {
+      background: #ffd700;
+    }
+
+    .accent-bottom {
+      display: flex;
+      height: 4px;
+      margin: 0;
+    }
+
+    .accent-bottom div {
+      flex: 1;
+    }
+
+    .accent-bottom .yellow {
+      background: #ffd700;
+    }
+
+    .accent-bottom .red {
+      background: #dc143c;
+    }
+
+    .accent-bottom .blue {
+      background: #0066cc;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+      padding: 3.5rem 20px;
+      background: #ffffff;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      color: #0066cc;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .hero-content p {
+      font-size: 1.15rem;
+      color: #555;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .hero-image {
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      max-width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background: #0066cc;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 102, 204, 0.25);
+    }
+
+    .btn-secondary {
+      border: 2px solid #dc143c;
+      color: #dc143c;
+      background: white;
+    }
+
+    .btn-secondary:hover {
+      background: #dc143c;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Note */
+    .note {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 1.5rem;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* CTA Section */
+    .cta {
+      background: #ffd700;
+      color: #222;
+      padding: 3.5rem 20px;
+      text-align: center;
+      margin: 0;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: #0066cc;
+      letter-spacing: -0.5px;
+    }
+
+    .cta p {
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #333;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      padding: 3rem 20px;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-contact {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #444;
+    }
+
+    .footer-contact p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+
+    .footer-contact a {
+      font-size: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav .logo {
+        font-size: 1.4rem;
+      }
+
+      nav .language-switcher {
+        gap: 1rem;
+      }
+
+      nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2.5rem 20px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      .hero-image img {
+        max-width: 260px;
+      }
+
+      .btn-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 1.5rem;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .cta h2 {
+        font-size: 1.5rem;
+      }
+
+      .cta p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo">Malinali</div>
+      <div class="language-switcher">
+        {{ if eq .Site.Language.Lang "fr" }}
+          <a href="/fr/" class="active">Français</a>
+          <a href="/en/">English</a>
+        {{ else }}
+          <a href="/fr/">Français</a>
+          <a href="/en/" class="active">English</a>
+        {{ end }}
+      </div>
+    </div>
+  </nav>
+
+  <div class="accent-top">
+    <div class="blue"></div>
+    <div class="red"></div>
+    <div class="yellow"></div>
+  </div>
+
+  <main>
+    {{ if eq .Site.Language.Lang "fr" }}
+      <!-- French Content -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Malinali</h1>
+          <p>Application de traduction pour les langues rares</p>
+          
+          <div class="btn-group">
+            <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Code Source
+            </a>
+            <a href="mailto:{{ .Site.Params.email }}" class="btn btn-secondary">
+              Nous Contacter
+            </a>
+          </div>
+
+          <div class="note">
+            <strong>Note :</strong> L'application n'est pas encore disponible sur Google Play Store ni Apple App Store. Consultez les sources ouvertes pour plus de détails.
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="/images/logo.jpg" alt="Malinali">
+        </div>
+      </section>
+
+      <div class="accent-bottom">
+        <div class="yellow"></div>
+        <div class="red"></div>
+        <div class="blue"></div>
+      </div>
+
+      <section class="cta">
+        <h2>Traduction pour tous les langages</h2>
+        <p>Malinali est l'outil idéal pour explorer et découvrir les langues à faibles ressources. Une application libre et open source, conçue pour fonctionner hors ligne sur tous les appareils.</p>
+        <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Découvrir le projet
+        </a>
+      </section>
+
+    {{ else }}
+      <!-- English Content -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Malinali</h1>
+          <p>Bridging low-resource natural languages through a simple cross-platform app.</p>
+          
+          <div class="btn-group">
+            <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Source Code
+            </a>
+            <a href="mailto:{{ .Site.Params.email }}" class="btn btn-secondary">
+              Contact Us
+            </a>
+          </div>
+
+          <div class="note">
+            <strong>Note:</strong> The app is not yet available on Google Play Store or Apple App Store. Check the open-source sources for more details.
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="/images/logo.jpg" alt="Malinali">
+        </div>
+      </section>
+
+      <div class="accent-bottom">
+        <div class="yellow"></div>
+        <div class="red"></div>
+        <div class="blue"></div>
+      </div>
+
+      <section class="cta">
+        <h2>Translation for all languages</h2>
+        <p>Malinali is the ideal tool for exploring and discovering low-resource languages. A free and open-source application designed to work offline on all devices.</p>
+        <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Discover the project
+        </a>
+      </section>
+
+    {{ end }}
+  </main>
+
+  <div class="accent-top">
+    <div class="blue"></div>
+    <div class="red"></div>
+    <div class="yellow"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Malinali - {{ if eq .Site.Language.Lang "fr" }}Tous droits réservés{{ else }}All rights reserved{{ end }}</p>
+      
+      <div class="footer-links">
+        <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+      </div>
+
+      <div class="footer-contact">
+        {{ if eq .Site.Language.Lang "fr" }}
+          <p><strong>Email :</strong> <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+        {{ else }}
+          <p><strong>Email:</strong> <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+        {{ end }}
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
