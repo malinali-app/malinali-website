@@ -1,2 +1,0 @@
-# malinali-website
-website
