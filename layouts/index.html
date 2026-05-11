@@ -468,6 +468,7 @@
       <div class="footer-links">
         <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+        <a href="/{{ .Site.Language.Lang }}/privacy/">{{ if eq .Site.Language.Lang "fr" }}Confidentialité{{ else }}Privacy Policy{{ end }}</a>
       </div>
 
       <div class="footer-contact">

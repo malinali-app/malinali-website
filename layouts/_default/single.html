@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fafafa;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navigation */
+    nav {
+      background: #0066cc;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+
+    nav .language-switcher {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    nav a.active {
+      background: rgba(255,255,255,0.3);
+      border-bottom: 2px solid white;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Content Area */
+    main {
+      flex: 1;
+      padding: 4rem 20px;
+      background: white;
+    }
+
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-wrapper h1 {
+      color: #0066cc;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .content-wrapper h2 {
+      color: #0066cc;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .content-wrapper p {
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+
+    /* Accent bars */
+    .accent-top {
+      display: flex;
+      height: 4px;
+      margin: 0;
+    }
+
+    .accent-top div {
+      flex: 1;
+    }
+
+    .accent-top .blue { background: #0066cc; }
+    .accent-top .red { background: #dc143c; }
+    .accent-top .yellow { background: #ffd700; }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      padding: 3rem 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-contact {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #444;
+    }
+
+    .footer-contact p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-wrapper h1 {
+        font-size: 2rem;
+      }
+      
+      nav .logo {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="/{{ .Site.Language.Lang }}/" class="logo">Malinali</a>
+      <div class="language-switcher">
+        {{ range .Translations }}
+          <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+        {{ end }}
+        <a href="{{ .Permalink }}" class="active">{{ .Language.LanguageName }}</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="accent-top">
+    <div class="blue"></div>
+    <div class="red"></div>
+    <div class="yellow"></div>
+  </div>
+
+  <main>
+    <div class="container">
+      <article class="content-wrapper">
+        {{ .Content }}
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Malinali - {{ if eq .Site.Language.Lang "fr" }}Tous droits réservés{{ else }}All rights reserved{{ end }}</p>
+      
+      <div class="footer-links">
+        <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+        <a href="/{{ .Site.Language.Lang }}/privacy/">{{ if eq .Site.Language.Lang "fr" }}Confidentialité{{ else }}Privacy Policy{{ end }}</a>
+      </div>
+
+      <div class="footer-contact">
+        {{ if eq .Site.Language.Lang "fr" }}
+          <p><strong>Email :</strong> <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+        {{ else }}
+          <p><strong>Email:</strong> <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+        {{ end }}
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
