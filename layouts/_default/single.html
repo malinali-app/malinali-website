@@ -183,7 +183,7 @@
   <!-- Navigation -->
   <nav>
     <div class="container">
-      <a href="/{{ .Site.Language.Lang }}/" class="logo">Malinali</a>
+      <a href="{{ "/" | relLangURL }}" class="logo">Malinali</a>
       <div class="language-switcher">
         {{ range .Translations }}
           <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
@@ -215,7 +215,7 @@
       <div class="footer-links">
         <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
-        <a href="/{{ .Site.Language.Lang }}/privacy/">{{ if eq .Site.Language.Lang "fr" }}Confidentialité{{ else }}Privacy Policy{{ end }}</a>
+        <a href="{{ "privacy-policy/" | relLangURL }}">{{ if eq .Site.Language.Lang "fr" }}Confidentialité{{ else }}Privacy Policy{{ end }}</a>
       </div>
 
       <div class="footer-contact">
