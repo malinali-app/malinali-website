@@ -214,6 +214,68 @@
       font-weight: 300;
     }
 
+    .note a {
+      color: #0066cc;
+      font-weight: 500;
+    }
+
+    .note a:hover {
+      text-decoration: underline;
+    }
+
+    /* Research / NGO section */
+    .audience {
+      background: #ffffff;
+      padding: 3.5rem 20px;
+    }
+
+    .audience-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .audience h2 {
+      font-size: 1.85rem;
+      color: #0066cc;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .audience > .audience-inner > p {
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 2rem;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .feature-list li {
+      padding: 1.25rem 1.5rem;
+      border-left: 4px solid #0066cc;
+      background: #f7f9fc;
+    }
+
+    .feature-list li strong {
+      display: block;
+      color: #222;
+      margin-bottom: 0.35rem;
+      font-size: 1.05rem;
+    }
+
+    .feature-list li span {
+      color: #555;
+      font-weight: 300;
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
     /* CTA Section */
     .cta {
       background: #ffd700;
@@ -234,12 +296,17 @@
     .cta p {
       font-size: 1.05rem;
       margin-bottom: 2rem;
-      max-width: 600px;
+      max-width: 640px;
       margin-left: auto;
       margin-right: auto;
       color: #333;
       font-weight: 300;
       line-height: 1.7;
+    }
+
+    .cta .btn-group {
+      justify-content: center;
+      margin-bottom: 0;
     }
 
     /* Footer */
@@ -377,19 +444,19 @@
       <section class="hero">
         <div class="hero-content">
           <h1>Malinali</h1>
-          <p>Application de traduction pour les langues rares</p>
+          <p>Traduction et reconnaissance vocale hors ligne pour les langues à faibles ressources — conçu pour la recherche, le terrain et les ONG.</p>
           
           <div class="btn-group">
-            <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              Code Source
+            <a href="{{ .Site.Params.playstore }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Google Play
             </a>
-            <a href="mailto:{{ .Site.Params.email }}" class="btn btn-secondary">
-              Nous Contacter
+            <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Code Source
             </a>
           </div>
 
           <div class="note">
-            <strong>Note :</strong> L'application n'est pas encore disponible sur Google Play Store ni Apple App Store. Consultez les sources ouvertes pour plus de détails.
+            Disponible sur <a href="{{ .Site.Params.playstore }}" target="_blank" rel="noopener noreferrer">Google Play</a>. Libre, open source, 100&nbsp;% confidentiel — aucun texte envoyé à des serveurs tiers.
           </div>
         </div>
 
@@ -404,12 +471,38 @@
         <div class="blue"></div>
       </div>
 
+      <section class="audience">
+        <div class="audience-inner">
+          <h2>Pour la recherche et les ONG</h2>
+          <p>Malinali permet de travailler avec des langues peu documentées sans dépendance au cloud : adapté aux missions terrain, à la documentation linguistique et aux contextes où la confidentialité est essentielle.</p>
+          <ul class="feature-list">
+            <li>
+              <strong>Traduction neuronale locale (MarianMT)</strong>
+              <span>Plus de 67 modèles ouverts couvrant environ 25 langues, exécutés sur l’appareil via Rust / Candle — y compris un modèle français ↔ peul (fula) en cours d’affinage (Helsinki OPUS).</span>
+            </li>
+            <li>
+              <strong>Transcription audio hors ligne (Vosk)</strong>
+              <span>Reconnaissance vocale locale au-delà du français : collecter, transcrire et annoter des données orales sans connexion.</span>
+            </li>
+            <li>
+              <strong>Confidentialité totale</strong>
+              <span>Aucun envoi du texte utilisateur vers des serveurs tiers. Idéal pour la santé, les droits humains, l’humanitaire et les enquêtes sensibles.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section class="cta">
         <h2>Traduction pour tous les langages</h2>
-        <p>Malinali est l'outil idéal pour explorer et découvrir les langues à faibles ressources. Une application libre et open source, conçue pour fonctionner hors ligne sur tous les appareils.</p>
-        <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          Découvrir le projet
-        </a>
+        <p>Une application libre pour explorer les langues à faibles ressources, documenter le terrain et accompagner les équipes de recherche et d’ONG — partout, même hors ligne.</p>
+        <div class="btn-group">
+          <a href="{{ .Site.Params.playstore }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Télécharger sur Google Play
+          </a>
+          <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Découvrir le projet
+          </a>
+        </div>
       </section>
 
     {{ else }}
@@ -417,19 +510,19 @@
       <section class="hero">
         <div class="hero-content">
           <h1>Malinali</h1>
-          <p>Bridging low-resource natural languages through a simple cross-platform app.</p>
+          <p>Offline translation and speech recognition for low-resource languages — built for research, fieldwork, and NGOs.</p>
           
           <div class="btn-group">
-            <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              Source Code
+            <a href="{{ .Site.Params.playstore }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Google Play
             </a>
-            <a href="mailto:{{ .Site.Params.email }}" class="btn btn-secondary">
-              Contact Us
+            <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Source Code
             </a>
           </div>
 
           <div class="note">
-            <strong>Note:</strong> The app is not yet available on Google Play Store or Apple App Store. Check the open-source sources for more details.
+            Available on <a href="{{ .Site.Params.playstore }}" target="_blank" rel="noopener noreferrer">Google Play</a>. Free, open source, fully confidential — no user text sent to third-party servers.
           </div>
         </div>
 
@@ -444,12 +537,38 @@
         <div class="blue"></div>
       </div>
 
+      <section class="audience">
+        <div class="audience-inner">
+          <h2>For research and NGOs</h2>
+          <p>Malinali lets you work with under-documented languages without cloud dependency — suited to field missions, linguistic documentation, and contexts where confidentiality is essential.</p>
+          <ul class="feature-list">
+            <li>
+              <strong>On-device neural translation (MarianMT)</strong>
+              <span>67+ open models covering ~25 languages, running locally via Rust / Candle — including a French ↔ Fula (Pulaar) model being fine-tuned from Helsinki OPUS.</span>
+            </li>
+            <li>
+              <strong>Offline speech transcription (Vosk)</strong>
+              <span>Local speech recognition beyond French: collect, transcribe, and annotate oral data with no connectivity.</span>
+            </li>
+            <li>
+              <strong>Full confidentiality</strong>
+              <span>No user text is sent to third-party servers. Fit for health, human rights, humanitarian, and sensitive survey work.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section class="cta">
         <h2>Translation for all languages</h2>
-        <p>Malinali is the ideal tool for exploring and discovering low-resource languages. A free and open-source application designed to work offline on all devices.</p>
-        <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          Discover the project
-        </a>
+        <p>A free application to explore low-resource languages, document the field, and support research and NGO teams — everywhere, even offline.</p>
+        <div class="btn-group">
+          <a href="{{ .Site.Params.playstore }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Get it on Google Play
+          </a>
+          <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Discover the project
+          </a>
+        </div>
       </section>
 
     {{ end }}
@@ -467,7 +586,8 @@
       <p>&copy; 2026 Malinali - {{ if eq .Site.Language.Lang "fr" }}Tous droits réservés{{ else }}All rights reserved{{ end }}</p>
       
       <div class="footer-links">
-        <a href="https://github.com/malinali-app/malinali-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="{{ .Site.Params.playstore }}" target="_blank" rel="noopener noreferrer">Google Play</a>
+        <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
         <a href="{{ "privacy-policy/" | relLangURL }}">{{ if eq .Site.Language.Lang "fr" }}Confidentialité{{ else }}Privacy Policy{{ end }}</a>
       </div>

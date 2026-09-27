@@ -20,3 +20,4 @@ weight = 2
 description = "Malinali - Bridging low-resource natural languages through a simple cross-platform app"
 email = "hello@malinali.app"
 github = "https://github.com/malinali-app/malinali-app"
+playstore = "https://play.google.com/store/apps/details?id=app.malinali.l10n&hl=fr"

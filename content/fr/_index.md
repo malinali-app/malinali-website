@@ -1,4 +1,4 @@
 ---
 title: "Malinali"
-description: "Malinali - Application de traduction pour les langues rares"
+description: "Malinali — traduction et reconnaissance vocale hors ligne pour la recherche, le terrain et les ONG"
 ---

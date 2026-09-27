@@ -1,4 +1,4 @@
 ---
 title: "Malinali"
-description: "Malinali - Bridging low-resource natural languages"
+description: "Malinali — offline translation and speech recognition for research, fieldwork, and NGOs"
 ---

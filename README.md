@@ -11,6 +11,7 @@ A beautiful bilingual (French/English) Hugo website for Malinali - an offline tr
 - 🔗 **Easy Navigation**: Language switcher and clear call-to-action buttons
 - 📧 **Contact Information**: Displays hello@malinali.app
 - 🔒 **GitHub Integration**: Links to the open-source repository
+- 📱 **Google Play**: [Malinali on Google Play](https://play.google.com/store/apps/details?id=app.malinali.l10n&hl=fr)
 
 ## Project Structure
 
@@ -88,6 +89,7 @@ The website is configured in `hugo.toml`:
 - **Supported Languages**: French and English
 - **Email**: `hello@malinali.app`
 - **GitHub**: `https://github.com/malinali-app/malinali-app`
+- **Google Play**: `https://play.google.com/store/apps/details?id=app.malinali.l10n&hl=fr`
 
 ### Customization
 
@@ -98,6 +100,7 @@ To change email or social links, edit `hugo.toml`:
 description = "Your description here"
 email = "your-email@example.com"
 github = "https://github.com/your-repo"
+playstore = "https://play.google.com/store/apps/details?id=app.malinali.l10n&hl=fr"
 ```
 
 ## Content
@@ -160,9 +163,11 @@ Replace `static/images/logo.jpg` with your own logo file and update references i
 
 - 🌐 **Multilingual Support**: For low-resource languages
 - 📱 **Cross-Platform**: iOS, Android, Web, Linux, macOS, Windows
-- 🔒 **Offline-First**: All data stored locally
-- ⚡ **Lightweight**: Optimized for low-end devices
-- 🤝 **User Contributions**: Community-driven translations
+- 🤖 **Local MarianMT**: 67+ neural models (~25 languages), on-device via Candle
+- 🎤 **Vosk transcription**: Offline speech recognition beyond French
+- 🔒 **Offline-First**: All data stored locally — no third-party servers
+- ⚡ **Lightweight**: Optimized for low-end devices and field work
+- 🤝 **Research & NGOs**: Built for linguistic documentation, mediation, and humanitarian contexts
 - 🔐 **Privacy-First**: Open source and FOSS
 
 ## Troubleshooting
@@ -188,7 +193,8 @@ This website showcases Malinali, which is licensed under GPL-2.0. See the main r
 For issues or questions about the website:
 - 📧 Email: hello@malinali.app
 - 🔗 GitHub: https://github.com/malinali-app/malinali-app
+- 📱 Google Play: https://play.google.com/store/apps/details?id=app.malinali.l10n&hl=fr
 
 ---
 
-**Last Updated**: May 3, 2026
+**Last Updated**: September 27, 2026
