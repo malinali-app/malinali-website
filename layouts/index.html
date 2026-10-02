@@ -276,6 +276,15 @@
       line-height: 1.65;
     }
 
+    .feature-list li span a {
+      color: #0066cc;
+      font-weight: 500;
+    }
+
+    .feature-list li span a:hover {
+      text-decoration: underline;
+    }
+
     /* CTA Section */
     .cta {
       background: #ffd700;
@@ -444,7 +453,7 @@
       <section class="hero">
         <div class="hero-content">
           <h1>Malinali</h1>
-          <p>Traduction et reconnaissance vocale hors ligne pour les langues à faibles ressources — conçu pour la recherche, le terrain et les ONG.</p>
+          <p>Traduction et reconnaissance vocale hors ligne pour les langues à faibles ressources. {{ .Site.Params.marianModelCount }} modèles MarianMT bilatéraux ({{ .Site.Params.marianLanguageCount }} langues), sur l’appareil.</p>
           
           <div class="btn-group">
             <a href="{{ .Site.Params.playstore }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
@@ -473,12 +482,16 @@
 
       <section class="audience">
         <div class="audience-inner">
-          <h2>Pour la recherche et les ONG</h2>
-          <p>Malinali permet de travailler avec des langues peu documentées sans dépendance au cloud : adapté aux missions terrain, à la documentation linguistique et aux contextes où la confidentialité est essentielle.</p>
+          <h2>Hors ligne, ouvert, à vous</h2>
+          <p>Malinali permet de travailler avec des langues peu documentées sans dépendance au cloud — y compris lorsque la confidentialité est essentielle.</p>
           <ul class="feature-list">
             <li>
               <strong>Traduction neuronale locale (MarianMT)</strong>
-              <span>Plus de 67 modèles ouverts couvrant environ 25 langues, exécutés sur l’appareil via Rust / Candle — y compris un modèle français ↔ peul (fula) en cours d’affinage (Helsinki OPUS).</span>
+              <span>{{ .Site.Params.marianModelCount }} modèles bilatéraux ouverts couvrant {{ .Site.Params.marianLanguageCount }} langues — paires africaines Helsinki-NLP incluses, et un modèle français ↔ peul (fula) en cours d’affinage. {{ .Site.Params.marianAfricanNoteFr }}</span>
+            </li>
+            <li>
+              <strong>Apportez votre modèle de traduction</strong>
+              <span><em>MarianMT uniquement.</em> Collez l’identifiant d’un dépôt Hugging Face ; Malinali le télécharge et traduit hors ligne. Compatible avec l’écosystème <a href="https://marian-nmt.github.io/" target="_blank" rel="noopener noreferrer">Marian</a>.</span>
             </li>
             <li>
               <strong>Transcription audio hors ligne (Vosk)</strong>
@@ -486,7 +499,7 @@
             </li>
             <li>
               <strong>Confidentialité totale</strong>
-              <span>Aucun envoi du texte utilisateur vers des serveurs tiers. Idéal pour la santé, les droits humains, l’humanitaire et les enquêtes sensibles.</span>
+              <span>Aucun envoi du texte utilisateur vers des serveurs tiers.</span>
             </li>
           </ul>
         </div>
@@ -494,7 +507,7 @@
 
       <section class="cta">
         <h2>Traduction pour tous les langages</h2>
-        <p>Une application libre pour explorer les langues à faibles ressources, documenter le terrain et accompagner les équipes de recherche et d’ONG — partout, même hors ligne.</p>
+        <p>Une application libre pour traduire hors ligne — modèles ouverts, y compris les vôtres.</p>
         <div class="btn-group">
           <a href="{{ .Site.Params.playstore }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
             Télécharger sur Google Play
@@ -510,7 +523,7 @@
       <section class="hero">
         <div class="hero-content">
           <h1>Malinali</h1>
-          <p>Offline translation and speech recognition for low-resource languages — built for research, fieldwork, and NGOs.</p>
+          <p>Offline translation and speech recognition for low-resource languages. {{ .Site.Params.marianModelCount }} bilateral MarianMT models ({{ .Site.Params.marianLanguageCount }} languages), on device.</p>
           
           <div class="btn-group">
             <a href="{{ .Site.Params.playstore }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
@@ -539,12 +552,16 @@
 
       <section class="audience">
         <div class="audience-inner">
-          <h2>For research and NGOs</h2>
-          <p>Malinali lets you work with under-documented languages without cloud dependency — suited to field missions, linguistic documentation, and contexts where confidentiality is essential.</p>
+          <h2>Offline, open, yours</h2>
+          <p>Malinali lets you work with under-documented languages without cloud dependency — including when confidentiality matters.</p>
           <ul class="feature-list">
             <li>
               <strong>On-device neural translation (MarianMT)</strong>
-              <span>67+ open models covering ~25 languages, running locally via Rust / Candle — including a French ↔ Fula (Pulaar) model being fine-tuned from Helsinki OPUS.</span>
+              <span>{{ .Site.Params.marianModelCount }} open bilateral models covering {{ .Site.Params.marianLanguageCount }} languages — African Helsinki-NLP pairs included, plus a French ↔ Fula (Pulaar) model being fine-tuned. {{ .Site.Params.marianAfricanNoteEn }}</span>
+            </li>
+            <li>
+              <strong>Bring your own translation model</strong>
+              <span><em>MarianMT only.</em> Paste a Hugging Face repo id; Malinali downloads it and translates offline. Built on the <a href="https://marian-nmt.github.io/" target="_blank" rel="noopener noreferrer">Marian</a> ecosystem.</span>
             </li>
             <li>
               <strong>Offline speech transcription (Vosk)</strong>
@@ -552,7 +569,7 @@
             </li>
             <li>
               <strong>Full confidentiality</strong>
-              <span>No user text is sent to third-party servers. Fit for health, human rights, humanitarian, and sensitive survey work.</span>
+              <span>No user text is sent to third-party servers.</span>
             </li>
           </ul>
         </div>
@@ -560,7 +577,7 @@
 
       <section class="cta">
         <h2>Translation for all languages</h2>
-        <p>A free application to explore low-resource languages, document the field, and support research and NGO teams — everywhere, even offline.</p>
+        <p>A free application for offline translation — open models, including yours.</p>
         <div class="btn-group">
           <a href="{{ .Site.Params.playstore }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
             Get it on Google Play
