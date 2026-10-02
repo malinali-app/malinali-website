@@ -164,7 +164,7 @@ Replace `static/images/logo.jpg` with your own logo file and update references i
 - 🌐 **Multilingual Support**: For low-resource languages
 - 📱 **Cross-Platform**: iOS, Android, Web, Linux, macOS, Windows
 - 🤖 **Local MarianMT**: 110+ bilateral neural models (~40 languages), on-device; African Helsinki OPUS pairs with BLEU hints
-- 📦 **Bring your own translation model**: MarianMT only — paste a Hugging Face repo id ([Marian](https://marian-nmt.github.io/) ecosystem)
+- 📦 **Use your own model**: MarianMT only — paste a Hugging Face repo id ([Marian](https://marian-nmt.github.io/) ecosystem)
 - 🎤 **Vosk transcription**: Offline speech recognition beyond French
 - 🔒 **Offline-First**: All data stored locally — no third-party servers
 - ⚡ **Lightweight**: Optimized for low-end devices and field work
