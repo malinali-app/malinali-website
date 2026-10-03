@@ -1,4 +1,4 @@
 ---
-title: "Malinali"
-description: "Malinali — traduction et reconnaissance vocale hors ligne ; MarianMT bilatéral et utilisez votre propre modèle depuis Hugging Face"
+title: "Malinali — traduction hors ligne"
+description: "Traduction et reconnaissance vocale hors ligne. 110+ modèles MarianMT bilatéraux (~40 langues) sur l’appareil, ou votre propre modèle Hugging Face."
 ---

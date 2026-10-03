@@ -2,6 +2,8 @@ baseURL = 'https://malinali.app/'
 title = 'Malinali'
 defaultContentLanguage = 'fr'
 defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
 
 [languages]
 [languages.fr]
@@ -17,7 +19,7 @@ languageName = 'English'
 weight = 2
 
 [params]
-description = "Malinali - Bridging low-resource natural languages through a simple cross-platform app"
+description = "Traduction et reconnaissance vocale hors ligne pour les langues à faibles ressources."
 email = "hello@malinali.app"
 github = "https://github.com/malinali-app/malinali-app"
 playstore = "https://play.google.com/store/apps/details?id=app.malinali.l10n&hl=fr"

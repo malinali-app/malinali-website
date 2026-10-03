@@ -1,0 +1,64 @@
+{{ $desc := .Description | default .Site.Params.description | plainify }}
+{{ $title := .Title }}
+{{ if not .IsHome }}
+  {{ $title = printf "%s — %s" .Title site.Title }}
+{{ end }}
+{{ $image := "images/logo.jpg" | absURL }}
+{{ $bits := split .Language.LanguageCode "-" }}
+{{ $ogLocale := .Language.LanguageCode }}
+{{ if ge (len $bits) 2 }}
+  {{ $ogLocale = printf "%s_%s" (index $bits 0) (upper (index $bits 1)) }}
+{{ end }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+  {{ if eq .Lang "fr" }}
+    <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+  {{ end }}
+{{ end }}
+<link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="any">
+<link rel="icon" href="{{ "favicon-32.png" | absURL }}" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ $image }}">
+<meta property="og:image:alt" content="Malinali">
+<meta property="og:locale" content="{{ $ogLocale }}">
+{{ range .Translations }}
+  {{ $altBits := split .Language.LanguageCode "-" }}
+  {{ $altLocale := .Language.LanguageCode }}
+  {{ if ge (len $altBits) 2 }}
+    {{ $altLocale = printf "%s_%s" (index $altBits 0) (upper (index $altBits 1)) }}
+  {{ end }}
+  <meta property="og:locale:alternate" content="{{ $altLocale }}">
+{{ end }}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $image }}">
+{{ if .IsHome }}
+  {{ $feature := "Offline MarianMT translation, Vosk speech recognition, and your own Hugging Face model" }}
+  {{ if eq .Lang "fr" }}
+    {{ $feature = "Traduction MarianMT hors ligne, reconnaissance vocale Vosk, et votre propre modèle Hugging Face" }}
+  {{ end }}
+  {{ $offer := dict "@type" "Offer" "price" "0" "priceCurrency" "EUR" }}
+  {{ $ld := dict
+    "@context" "https://schema.org"
+    "@type" "SoftwareApplication"
+    "name" "Malinali"
+    "applicationCategory" "UtilitiesApplication"
+    "operatingSystem" "Android"
+    "offers" $offer
+    "description" $desc
+    "url" .Permalink
+    "image" $image
+    "sameAs" (slice site.Params.github site.Params.playstore)
+    "inLanguage" (slice "fr" "en")
+    "featureList" $feature
+  }}
+  <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+{{ end }}

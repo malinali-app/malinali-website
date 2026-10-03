@@ -1,5 +1,6 @@
 ---
 title: "Politique de confidentialité"
+description: "Politique de confidentialité de Malinali : aucune donnée personnelle stockée, traduction hors ligne sur l’appareil."
 date: 2026-05-11
 draft: false
 ---

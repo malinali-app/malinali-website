@@ -1,5 +1,6 @@
 ---
 title: "Privacy Policy"
+description: "Malinali privacy policy: no personal data stored. Offline translation stays on your device."
 date: 2026-05-11
 draft: false
 ---

@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Site.Title }} - {{ .Site.Params.description }}</title>
-  <meta name="description" content="{{ .Site.Params.description }}">
+  {{ partial "seo.html" . }}
   <style>
     * {
       margin: 0;
@@ -285,6 +284,26 @@
       text-decoration: underline;
     }
 
+    .languages {
+      background: #f7f9fc;
+      padding: 3.5rem 20px;
+    }
+
+    .languages h2 {
+      font-size: 1.85rem;
+      color: #0066cc;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .languages p {
+      font-size: 1.05rem;
+      color: #444;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
     /* CTA Section */
     .cta {
       background: #ffd700;
@@ -470,7 +489,7 @@
         </div>
 
         <div class="hero-image">
-          <img src="/images/logo.jpg" alt="Malinali">
+          <img src="/images/logo.jpg" alt="Logo Malinali, application de traduction hors ligne">
         </div>
       </section>
 
@@ -502,6 +521,13 @@
               <span>Aucun envoi du texte utilisateur vers des serveurs tiers.</span>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="languages">
+        <div class="audience-inner">
+          <h2>Langues couvertes</h2>
+          <p>{{ .Site.Params.marianLanguagesFr }}</p>
         </div>
       </section>
 
@@ -540,7 +566,7 @@
         </div>
 
         <div class="hero-image">
-          <img src="/images/logo.jpg" alt="Malinali">
+          <img src="/images/logo.jpg" alt="Malinali logo, offline translation app">
         </div>
       </section>
 
@@ -572,6 +598,13 @@
               <span>No user text is sent to third-party servers.</span>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="languages">
+        <div class="audience-inner">
+          <h2>Languages covered</h2>
+          <p>{{ .Site.Params.marianLanguagesEn }}</p>
         </div>
       </section>
 

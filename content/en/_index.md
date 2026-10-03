@@ -1,4 +1,4 @@
 ---
-title: "Malinali"
-description: "Malinali — offline translation and speech recognition; bilateral MarianMT and use your own model from Hugging Face"
+title: "Malinali — offline translation"
+description: "Offline translation and speech recognition. 110+ bilateral MarianMT models (~40 languages) on device, or your own Hugging Face model."
 ---
